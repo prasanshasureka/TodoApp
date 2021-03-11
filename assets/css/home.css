@@ -1,0 +1,152 @@
+/* body{
+    display: inline-block;
+} */
+
+/* div{
+    border: 2px solid black;
+} */
+
+*:focus {
+    outline: none;
+}
+
+::placeholder{
+    font-size: 20px;
+}
+
+.border-bottom{
+    border-bottom: 1px solid grey;
+}
+
+#bodyDiv{
+    text-align: center;
+    width: 600px;
+    margin-left: 25%;
+    position: relative;
+}
+
+#page-heading{
+    text-align: center;
+    color: rgb(44, 2, 2);
+    font-size: 50px;
+}
+
+#formDiv{
+    width: inherit;
+}
+
+#formDiv > *{
+    margin: 1px;
+    /* border: none; */
+}
+
+#description{
+    width: 590px;
+    /* margin-bottom: 3px; */
+}
+
+.horizontal-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+input, select{
+    height: 50px;
+    /* margin: 3px; */
+    width: 300px;
+    border: 0;
+    font-size: 18px;
+}
+
+select{
+    height: 51px;
+    /* margin: 3px; */
+    width: 300px;
+    border-right: 1px solid grey;
+}
+
+button{
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    margin: 5px;
+    text-align: start;
+}
+
+i{
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+#addbutDiv{
+    width: 150px;
+    margin-left: 300px;
+    text-align: start;
+}
+
+#addbut{
+    margin-left: -105%;
+    margin-top: 20px;
+    position: relative;
+    background-color: rgb(224, 28, 28);
+    color: white;
+}
+
+#delbut{
+    margin-left: 30%;
+    background-color: rgb(61, 58, 58);
+    color: white;
+}
+
+#checkbox{
+    height: 13px;
+    width: 13px;
+    margin: 27px 0px 0px 10px;
+}
+
+ul{
+    list-style-type: None;
+    margin: 7px;
+    padding: 0px;
+}
+
+#cardDiv{
+    margin-top: -61px;
+    width: 600px;
+    /* position: absolute; */
+}
+
+.card{
+    height: 70px;
+    justify-content: start;
+    margin: 2px 0px 0px 0px;
+    border-top: 1px solid grey;
+}
+
+#taskDiv{
+    margin-left: 30px;
+    width: 500px;
+    text-align: start;
+    position: absolute;
+    height: inherit;
+}
+
+#categoryDiv{
+    position: relative;
+    margin-left: 80%;
+    width: 120px;
+    margin-top: 25px;
+    text-transform: capitalize;
+    height: 25px;
+    padding-top: 6px;
+    font-weight: 600;
+}
+
+h3{
+    margin: 13px 5px 0px 5px;
+}
+
+#taskDiv > p{
+    margin: 5px 0px 0px 5px;
+}

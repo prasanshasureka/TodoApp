@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <h1 id="page-heading">TODO List</h1>
+    <div id="bodyDiv">
+        <div id="formDiv">
+            <form action="/create-task" method="POST">
+                <div>
+                    <input type="text"  class="border-bottom" name="description" id="description" placeholder="Description" required>
+                </div>
+                <div class="horizontal-flex">
+                    <select name="category" id="checkbox-select" class="border-bottom">
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="school">School</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="date" name="date" id="date-input" placeholder="Date" class="border-bottom">
+                </div>
+                <div id="addbutDiv">
+                    <button type="submit" id="addbut">
+                        <i class="fas fa-plus"></i>
+                        Add Task
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div id="cardDiv">
+            <form action="/delete-task" method="GET">
+                <button type="submit" id="delbut">
+                    <i class="fas fa-minus-square"></i>
+                    Delete Task
+                </button>
+                <ul> 
+                    <% for (task of taskList){ %>
+                        <li>
+                            <div class="horizontal-flex card">
+                                <input type="checkbox" id="checkbox" name="<%= task._id%>">
+                                <div id="taskDiv">
+                                    <h3><%= task.description %></h3>
+                                    <p><%= task.date %></p>
+                                </div>
+                                <div id="categoryDiv">
+                                    <%= task.category %>
+                                </div>
+                            </div>
+                        </li>
+                    <% } %>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/home.js"></script>
+</body>
+</html>
