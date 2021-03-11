@@ -41,7 +41,8 @@
 }
 
 #description{
-    width: 590px;
+    width: 594px;
+    border-top: 1px solid grey;
     /* margin-bottom: 3px; */
 }
 
@@ -72,6 +73,7 @@ button{
     font-size: 18px;
     margin: 5px;
     text-align: start;
+    /* border: 2px; */
 }
 
 i{
@@ -105,6 +107,12 @@ i{
     margin: 27px 0px 0px 10px;
 }
 
+input[type=checkbox]:checked + .strikethrough{
+    text-decoration: line-through;
+    color: rgb(156, 154, 154);
+    background-color: lightgray;
+}
+
 ul{
     list-style-type: None;
     margin: 7px;
@@ -122,11 +130,12 @@ ul{
     justify-content: start;
     margin: 2px 0px 0px 0px;
     border-top: 1px solid grey;
+    /* background-color: rgb(201, 191, 191); */
 }
 
 #taskDiv{
     margin-left: 30px;
-    width: 500px;
+    width: 556px;
     text-align: start;
     position: absolute;
     height: inherit;
@@ -134,8 +143,8 @@ ul{
 
 #categoryDiv{
     position: relative;
-    margin-left: 80%;
-    width: 120px;
+    margin-left: 75%;
+    width: 100px;
     margin-top: 25px;
     text-transform: capitalize;
     height: 25px;
@@ -145,8 +154,15 @@ ul{
 
 h3{
     margin: 13px 5px 0px 5px;
+    font-size: 20px;
 }
 
 #taskDiv > p{
     margin: 5px 0px 0px 5px;
+    /* color: rgb(107, 100, 100); */
+}
+
+#taskDiv > p > i{
+    margin-right: 10px;
+    margin-left: 0px;
 }

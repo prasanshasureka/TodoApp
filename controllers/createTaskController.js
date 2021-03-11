@@ -1,7 +1,7 @@
 const Todo = require('../models/todoList')
 
 module.exports.addTask = function(req, res){
-    console.log(req.body);
+    // console.log(req.body.date.split('T')[0]);
     Todo.create({
         description: req.body.description,
         date: req.body.date,

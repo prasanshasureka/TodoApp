@@ -1,4 +1,16 @@
 const Todo = require('../models/todoList');
+var month_abr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+
+// var moment = require('moment');
+// app.use((req, res, next)=>{
+//     res.locals.moment = moment;
+//     next();
+// });
+
+// exports.index = function(req, res) {
+//     res.render('index', { moment: moment });
+// }
 
 
 module.exports.delete = function(req, res){
@@ -24,7 +36,8 @@ module.exports.home = function(req, res){
         }
         return res.render('home', {
             title: "My TODO List",
-            taskList: task
+            taskList: task,
+            month_abr: month_abr
         });
     });
     // return res.render('home', {

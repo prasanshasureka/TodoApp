@@ -44,13 +44,27 @@
                 <ul> 
                     <% for (task of taskList){ %>
                         <li>
-                            <div class="horizontal-flex card">
-                                <input type="checkbox" id="checkbox" name="<%= task._id%>">
-                                <div id="taskDiv">
-                                    <h3><%= task.description %></h3>
-                                    <p><%= task.date %></p>
+                            <div class="horizontal-flex card strikethrough">
+                                <input type="checkbox" id="checkbox" name="<%= task._id%>" class="strikethrough">
+                                <div id="taskDiv" class="strikethrough">
+                                    <h3 class="strikethrough"><%= task.description %></h3> 
+                                    <% if (task.date){ %>
+                                        <p>
+                                            <i class="fas fa-calendar-alt strikethrough"></i>
+                                            
+                                            <%= task.date.getDate() + " " + month_abr[task.date.getMonth()] + " " + task.date.getFullYear() %>
+                                            <!-- .toISOString().split('T')[0] -->
+                                            <!-- .toLocaleString().split(',')[0].replace('/','-').replace('/','-') -->
+                                        </p> 
+                                    <% }else{ %>
+                                        <p>
+                                            <i class="fas fa-calendar-alt strikethrough"></i>
+                                            No Deadline
+                                        </p>
+                                    <% } %>
+                                    
                                 </div>
-                                <div id="categoryDiv">
+                                <div id="categoryDiv" class="strikethrough">
                                     <%= task.category %>
                                 </div>
                             </div>
