@@ -2,8 +2,11 @@ const express = require('express');
 
 const db = require('./config/mongoose');
 const Todo = require('./models/todoList');
+
+const port = process.env.PORT || '8000';
+
 const app = express();
-const port = process.env.PORT || 8000;
+app.set("port", port);
 
 app.use(express.urlencoded());
 app.use('/', require('./routes'));
